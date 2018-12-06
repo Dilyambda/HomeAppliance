@@ -1,17 +1,17 @@
-import enums.colors;
-import enums.deviceBrand;
+import enums.Colors;
+import enums.DeviceBrand;
 
 public class HomeAppliance implements Comparable<HomeAppliance> {
     private final static double CAPACITY_RATIO = 0.5;
     private int capacity;
     private int weight;
-    private enums.colors color;
-    private deviceBrand brand;
+    private Colors color;
+    private DeviceBrand brand;
     private double cableLength;
     protected boolean isTurnedOn;
     private boolean isNight;
 
-    public HomeAppliance(int capacity, int weight, colors color, deviceBrand brand, double cableLength) {
+    public HomeAppliance(int capacity, int weight, Colors color, DeviceBrand brand, double cableLength) {
         this.capacity = capacity;
         this.weight = weight;
         this.color = color;
@@ -21,10 +21,10 @@ public class HomeAppliance implements Comparable<HomeAppliance> {
         this.isNight = false;
     }
 
-    public void setTurnedOn(){
+    public void setTurnedOn() {
     }
 
-    public void setTurnedOff(){
+    public void setTurnedOff() {
     }
 
     public boolean isTurnedOn() {
@@ -32,16 +32,16 @@ public class HomeAppliance implements Comparable<HomeAppliance> {
     }
 
     public void setCapacity(int capacity) {
-            this.capacity = capacity;
+        this.capacity = capacity;
     }
 
-        public int getCapacity() {
+    public int getCapacity() {
         int tmp;
-            if (isNight()) {
-                tmp = (int) (CAPACITY_RATIO  * capacity);
-            } else {
-                tmp = capacity;
-            }
+        if (isNight()) {
+            tmp = (int) (CAPACITY_RATIO * capacity);
+        } else {
+            tmp = capacity;
+        }
         return tmp;
     }
 
@@ -54,19 +54,19 @@ public class HomeAppliance implements Comparable<HomeAppliance> {
         this.weight = weight;
     }
 
-    public colors getColor() {
+    public Colors getColor() {
         return color;
     }
 
-    public void setcolor(colors color) {
+    public void setcolor(Colors color) {
         this.color = color;
     }
 
-    public deviceBrand getBrand() {
+    public DeviceBrand getBrand() {
         return brand;
     }
 
-    public void setbrand(deviceBrand brand) {
+    public void setbrand(DeviceBrand brand) {
         this.brand = brand;
     }
 
@@ -95,6 +95,6 @@ public class HomeAppliance implements Comparable<HomeAppliance> {
 
     @Override
     public int compareTo(HomeAppliance o1) {
-       return o1.getWeight() - this.getWeight();
+        return o1.getWeight() - this.getWeight();
     }
 }

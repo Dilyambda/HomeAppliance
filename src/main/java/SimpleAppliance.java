@@ -1,9 +1,9 @@
-import enums.colors;
-import enums.deviceBrand;
+import enums.Colors;
+import enums.DeviceBrand;
 
 public class SimpleAppliance extends HomeAppliance {
 
-    public SimpleAppliance(int capacity, int weight, colors color, deviceBrand brand, double cableLength) {
+    public SimpleAppliance(int capacity, int weight, Colors color, DeviceBrand brand, double cableLength) {
         super(capacity, weight, color, brand, cableLength);
         ElectricityAppliancesConnection.getAllAppliances().add(this);
     }

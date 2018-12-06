@@ -1,5 +1,5 @@
-import enums.colors;
-import enums.deviceBrand;
+import enums.Colors;
+import enums.DeviceBrand;
 
 public class Iron extends ComplexAppliance {
     private int minTemp;
@@ -9,7 +9,7 @@ public class Iron extends ComplexAppliance {
     private boolean hasWater = false;
     private boolean hasSprinklerFunction;
 
-    public Iron(int capacity, int weight, colors color, deviceBrand brand, double cableLength) {
+    public Iron(int capacity, int weight, Colors color, DeviceBrand brand, double cableLength) {
         super(capacity, weight, color, brand, cableLength);
     }
 
@@ -62,7 +62,7 @@ public class Iron extends ComplexAppliance {
         else this.hasSprinklerFunction = false;
     }
 
-    public void addWater(){
+    public void addWater() {
         if (getMeasuringCup()) if (!hasWater) {
             this.hasMeasuringCup = true;
         } else {
@@ -74,7 +74,7 @@ public class Iron extends ComplexAppliance {
 
     @Override
     public String toString() {
-        return "AboutIron{" + "capacity="+getCapacity() + ",weight=" + getWeight()+ ", color=" + getColor() +
+        return "AboutIron{" + "capacity=" + getCapacity() + ",weight=" + getWeight() + ", color=" + getColor() +
                 ", cableLength=" + getCableLength() + ", brand=" + getBrand() + ", isTurnedOn=" + isTurnedOn + ", isNight=" + isNight() + '}';
     }
 }

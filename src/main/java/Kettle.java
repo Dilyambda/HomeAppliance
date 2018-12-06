@@ -1,12 +1,12 @@
-import enums.colors;
-import enums.deviceBrand;
+import enums.Colors;
+import enums.DeviceBrand;
 
 public class Kettle extends ComplexAppliance {
     private int currentTemp;
     private int boilingTime;
     private boolean hasWater = false;
 
-    public Kettle(int capacity, int weight, colors color, deviceBrand brand, double cableLengt) {
+    public Kettle(int capacity, int weight, Colors color, DeviceBrand brand, double cableLengt) {
         super(capacity, weight, color, brand, cableLengt);
     }
 
@@ -44,7 +44,7 @@ public class Kettle extends ComplexAppliance {
 
     @Override
     public String toString() {
-        return "AboutKettle{" + "capacity="+ getCapacity() + ",weight=" + getWeight()+ ", color=" + getColor() +
+        return "AboutKettle{" + "capacity=" + getCapacity() + ",weight=" + getWeight() + ", color=" + getColor() +
                 ", cableLength=" + getCableLength() + ", brand=" + getBrand() + ", isTurnedOn=" + isTurnedOn + ", isNight=" + isNight() + '}';
     }
 }

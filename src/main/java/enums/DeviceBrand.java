@@ -1,6 +1,6 @@
 package enums;
 
-public enum deviceBrand {
+public enum DeviceBrand {
     LG_ELECTRONICS,
     SAMSUNG,
     PHILLIPS,

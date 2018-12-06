@@ -1,6 +1,6 @@
 package enums;
 
-public enum colors {
+public enum Colors {
     WHITE,
     BLACK,
     GREY,

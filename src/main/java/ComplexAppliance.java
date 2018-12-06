@@ -1,10 +1,10 @@
-import enums.colors;
-import enums.deviceBrand;
+import enums.Colors;
+import enums.DeviceBrand;
 
 public class ComplexAppliance extends HomeAppliance {
     private boolean ButtonTurnedOn;
 
-    public ComplexAppliance(int capacity, int weight, colors color, deviceBrand brand, double cableLength) {
+    public ComplexAppliance(int capacity, int weight, Colors color, DeviceBrand brand, double cableLength) {
         super(capacity, weight, color, brand, cableLength);
         this.ButtonTurnedOn = false;
         ElectricityAppliancesConnection.getAllAppliances().add(this);
