@@ -2,25 +2,25 @@ import enums.Colors;
 import enums.DeviceBrand;
 
 public class ComplexAppliance extends HomeAppliance {
-    private boolean ButtonTurnedOn;
+    private boolean buttonTurnedOn;
 
     public ComplexAppliance(int capacity, int weight, Colors color, DeviceBrand brand, double cableLength) {
         super(capacity, weight, color, brand, cableLength);
-        this.ButtonTurnedOn = false;
+        this.buttonTurnedOn = false;
         ElectricityAppliancesConnection.getAllAppliances().add(this);
     }
 
     public boolean isButtonisTurnedOn() {
-        return ButtonTurnedOn;
+        return buttonTurnedOn;
     }
 
     public void setButtonTurnedOff(boolean buttonTurnedOn) {
-        ButtonTurnedOn = false;
+        buttonTurnedOn = false;
     }
 
     public void pressButton() {
         if (!isButtonisTurnedOn()) {
-            ButtonTurnedOn = true;
+            buttonTurnedOn = true;
         }
     }
 
